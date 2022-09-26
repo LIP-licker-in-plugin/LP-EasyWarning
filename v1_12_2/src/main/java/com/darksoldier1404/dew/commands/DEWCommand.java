@@ -37,6 +37,10 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
             return false;
         }
         if (args[0].equals("추가")) {
+            if (!sender.hasPermission("dew.give")){
+                sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
+                return false;
+            }
             if (args.length == 1) {
                 sender.sendMessage(plugin.prefix + "플레이어를 입력해주세요.");
                 return false;
@@ -49,6 +53,10 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
             return false;
         }
         if (args[0].equals("차감")) {
+            if (!sender.hasPermission("dew.take")){
+                sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
+                return false;
+            }
             if (args.length == 1) {
                 sender.sendMessage(plugin.prefix + "플레이어를 입력해주세요.");
                 return false;
@@ -61,6 +69,10 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
             return false;
         }
         if (args[0].equals("확인")) {
+            if (!sender.hasPermission("dew.check")){
+                sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
+                return false;
+            }
             if (args.length == 1) {
                 sender.sendMessage(plugin.prefix + "플레이어를 입력해주세요.");
                 return false;
@@ -71,6 +83,10 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
             }
         }
         if (args[0].equals("차단")) {
+            if (!sender.hasPermission("dew.ban")){
+                sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
+                return false;
+            }
             if (args.length == 1) {
                 sender.sendMessage(plugin.prefix + "경고수를 입력해주세요.");
                 return false;
@@ -81,6 +97,10 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
             }
         }
         if (args[0].equals("추가사유")) {
+            if (!sender.hasPermission("dew.greason")){
+                sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
+                return false;
+            }
             if (args.length == 1) {
                 sender.sendMessage(plugin.prefix + "사유를 입력해주세요.");
                 return false;
@@ -89,6 +109,10 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
             return false;
         }
         if (args[0].equals("차감사유")) {
+            if (!sender.hasPermission("dew.treason")){
+                sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
+                return false;
+            }
             if (args.length == 1) {
                 sender.sendMessage(plugin.prefix + "사유를 입력해주세요.");
                 return false;
@@ -97,6 +121,10 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
             return false;
         }
         if (args[0].equals("추방사유")) {
+            if (!sender.hasPermission("dew.wreason")){
+                sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
+                return false;
+            }
             if (args.length == 1) {
                 sender.sendMessage(plugin.prefix + "사유를 입력해주세요.");
                 return false;
@@ -105,6 +133,10 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
             return false;
         }
         if (args[0].equals("아이피벤")) {
+            if (!sender.hasPermission("dew.ipban")){
+                sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
+                return false;
+            }
             if (args.length == 1) {
                 sender.sendMessage(plugin.prefix + "true 또는 false 를 입력해주세요.");
                 return false;
@@ -115,6 +147,10 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
             }
         }
         if (args[0].equals("리로드")) {
+            if (!sender.hasPermission("dew.reload")){
+                sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
+                return false;
+            }
             DEWFunction.reloadConfig();
             sender.sendMessage(plugin.prefix + "콘피그 설정을 리로드 하였습니다.");
             return false;
