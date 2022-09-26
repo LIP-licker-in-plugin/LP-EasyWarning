@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.darksoldier1404'
-version = '1.0.0.2'
+version = '1.0.0.3'
 
 compileJava.options.encoding = 'UTF-8'
 tasks.withType(JavaCompile) {
@@ -48,7 +48,7 @@ task DS_BUILD {
                     }
                     fr.close()
                     br.close()
-                    BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(f), "UTF-8"));
+                    BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(f), "UTF-8"))
                     lines.forEach(out::write)
                     out.close()
                 }
