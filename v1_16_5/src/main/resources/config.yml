@@ -1,0 +1,11 @@
+Settings:
+  prefix: "&f[ &c경고 &f] "
+
+  giveContext: "<player>님은 경고를 받았습니다. 사유: <reason>"
+  takeContext: "<player>님은 경고가 차감되었습니다. 사유: <reason>"
+  banContext: "<player>님은 최대 경고 횟수에 도달하여 서버에서 추방되었습니다."
+
+  maxWarn: 3
+
+  isIPBan: false
+
