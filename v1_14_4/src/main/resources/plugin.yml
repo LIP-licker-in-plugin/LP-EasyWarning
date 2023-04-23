@@ -1,12 +1,12 @@
 name: DP-EasyWarning
 version: 1.0.0.4
-main: com.darksoldier1404.dew.EasyWarning
-authors: [ DEAD_POOLIO_ ]
+main: com.licker2689.lew.EasyWarning
+authors: [ LICKER2689 ]
 api-version: 1.14
 depend:
-  - DPP-Core
+  - LP-Core
 commands:
   경고:
-    aliases: [dew]
+    aliases: [lew]
   경고확인:
-    aliases: [dewcheck]
+    aliases: [lewcheck]
