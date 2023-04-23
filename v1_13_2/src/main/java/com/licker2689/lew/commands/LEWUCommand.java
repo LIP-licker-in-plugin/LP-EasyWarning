@@ -1,7 +1,7 @@
-package com.darksoldier1404.dew.commands;
+package com.licker2689.lew.commands;
 
-import com.darksoldier1404.dew.EasyWarning;
-import com.darksoldier1404.dew.functions.DEWFunction;
+import com.licker2689.lew.EasyWarning;
+import com.licker2689.lew.functions.LEWFunction;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("all")
-public class DEWUCommand implements CommandExecutor {
+public class LEWUCommand implements CommandExecutor {
     private final EasyWarning plugin = EasyWarning.getInstance();
 
     @Override
@@ -20,7 +20,7 @@ public class DEWUCommand implements CommandExecutor {
         }
         Player p = (Player) sender;
         if (args.length == 0) {
-            DEWFunction.checkWarn(p);
+            LEWFunction.checkWarn(p);
             return false;
         }
         return false;

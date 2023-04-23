@@ -1,12 +1,12 @@
 name: DP-EasyWarning
-version: 1.0.0.4
+version: 1.0.0.5
 main: com.licker2689.lew.EasyWarning
 authors: [ LICKER2689 ]
 api-version: 1.13
 depend:
   - LP-Core
 commands:
-  경고:
+  寃쎄퀬:
     aliases: [lew]
-  경고확인:
+  寃쎄퀬�솗�씤:
     aliases: [lewcheck]

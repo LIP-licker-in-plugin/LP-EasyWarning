@@ -1,8 +1,8 @@
-package com.darksoldier1404.dew.functions;
+package com.licker2689.lew.functions;
 
-import com.darksoldier1404.dew.EasyWarning;
-import com.darksoldier1404.dppc.utils.ColorUtils;
-import com.darksoldier1404.dppc.utils.ConfigUtils;
+import com.licker2689.lew.EasyWarning;
+import com.licker2689.lpc.utils.ColorUtils;
+import com.licker2689.lpc.utils.ConfigUtils;
 import org.bukkit.BanList;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
@@ -14,7 +14,7 @@ import java.util.Iterator;
 import java.util.List;
 
 @SuppressWarnings("all")
-public class DEWFunction {
+public class LEWFunction {
     private static final EasyWarning plugin = EasyWarning.getInstance();
 
     public static void giveWarn(CommandSender sender, String player, String[] content) {

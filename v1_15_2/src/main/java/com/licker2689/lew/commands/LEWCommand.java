@@ -1,7 +1,7 @@
-package com.darksoldier1404.dew.commands;
+package com.licker2689.lew.commands;
 
-import com.darksoldier1404.dew.EasyWarning;
-import com.darksoldier1404.dew.functions.DEWFunction;
+import com.licker2689.lew.EasyWarning;
+import com.licker2689.lew.functions.LEWFunction;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @SuppressWarnings("all")
-public class DEWCommand implements CommandExecutor, TabCompleter {
+public class LEWCommand implements CommandExecutor, TabCompleter {
     private final EasyWarning plugin = EasyWarning.getInstance();
 
     @Override
@@ -37,7 +37,7 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
             return false;
         }
         if (args[0].equals("추가")) {
-            if (!sender.hasPermission("dew.give")){
+            if (!sender.hasPermission("lew.give")){
                 sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
                 return false;
             }
@@ -49,11 +49,11 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
                 sender.sendMessage(plugin.prefix + "사유를 입력해주세요.");
                 return false;
             }
-            DEWFunction.giveWarn(sender, args[1], args);
+            LEWFunction.giveWarn(sender, args[1], args);
             return false;
         }
         if (args[0].equals("차감")) {
-            if (!sender.hasPermission("dew.take")){
+            if (!sender.hasPermission("lew.take")){
                 sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
                 return false;
             }
@@ -65,11 +65,11 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
                 sender.sendMessage(plugin.prefix + "사유를 입력해주세요.");
                 return false;
             }
-            DEWFunction.takeWarn(sender, args[1], args);
+            LEWFunction.takeWarn(sender, args[1], args);
             return false;
         }
         if (args[0].equals("확인")) {
-            if (!sender.hasPermission("dew.check")){
+            if (!sender.hasPermission("lew.check")){
                 sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
                 return false;
             }
@@ -78,12 +78,12 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
                 return false;
             }
             if (args.length == 2) {
-                DEWFunction.checkWarn(sender, args[1]);
+                LEWFunction.checkWarn(sender, args[1]);
                 return false;
             }
         }
         if (args[0].equals("차단")) {
-            if (!sender.hasPermission("dew.ban")){
+            if (!sender.hasPermission("lew.ban")){
                 sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
                 return false;
             }
@@ -92,12 +92,12 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
                 return false;
             }
             if (args.length == 2) {
-                DEWFunction.setMaxWarn(sender, args[1]);
+                LEWFunction.setMaxWarn(sender, args[1]);
                 return false;
             }
         }
         if (args[0].equals("추가사유")) {
-            if (!sender.hasPermission("dew.greason")){
+            if (!sender.hasPermission("lew.greason")){
                 sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
                 return false;
             }
@@ -105,11 +105,11 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
                 sender.sendMessage(plugin.prefix + "사유를 입력해주세요.");
                 return false;
             }
-            DEWFunction.setWarnContext(sender, args);
+            LEWFunction.setWarnContext(sender, args);
             return false;
         }
         if (args[0].equals("차감사유")) {
-            if (!sender.hasPermission("dew.treason")){
+            if (!sender.hasPermission("lew.treason")){
                 sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
                 return false;
             }
@@ -117,11 +117,11 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
                 sender.sendMessage(plugin.prefix + "사유를 입력해주세요.");
                 return false;
             }
-            DEWFunction.setTakeContext(sender, args);
+            LEWFunction.setTakeContext(sender, args);
             return false;
         }
         if (args[0].equals("추방사유")) {
-            if (!sender.hasPermission("dew.wreason")){
+            if (!sender.hasPermission("lew.wreason")){
                 sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
                 return false;
             }
@@ -129,11 +129,11 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
                 sender.sendMessage(plugin.prefix + "사유를 입력해주세요.");
                 return false;
             }
-            DEWFunction.setBanContext(sender, args);
+            LEWFunction.setBanContext(sender, args);
             return false;
         }
         if (args[0].equals("아이피벤")) {
-            if (!sender.hasPermission("dew.ipban")){
+            if (!sender.hasPermission("lew.ipban")){
                 sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
                 return false;
             }
@@ -142,16 +142,16 @@ public class DEWCommand implements CommandExecutor, TabCompleter {
                 return false;
             }
             if (args.length == 2) {
-                DEWFunction.setIPBan(sender, args[1]);
+                LEWFunction.setIPBan(sender, args[1]);
                 return false;
             }
         }
         if (args[0].equals("리로드")) {
-            if (!sender.hasPermission("dew.reload")){
+            if (!sender.hasPermission("lew.reload")){
                 sender.sendMessage(plugin.prefix + "당신은 이 명령어를 사용할 권한이 없습니다.");
                 return false;
             }
-            DEWFunction.reloadConfig();
+            LEWFunction.reloadConfig();
             sender.sendMessage(plugin.prefix + "콘피그 설정을 리로드 하였습니다.");
             return false;
         }
